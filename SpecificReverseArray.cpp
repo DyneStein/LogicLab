@@ -39,6 +39,7 @@ int main()
     SpecificReverse(sentence,reversed);
     PrintOutput(reversed);
 
+return 0;
 }
 
 
