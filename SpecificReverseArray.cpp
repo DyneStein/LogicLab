@@ -35,11 +35,9 @@ void SpecificReverse(char array[],char R[]);
 int main()
 {
 
-
-TakeInput(sentence);
-SpecificReverse(sentence,reversed);
-PrintOutput(reversed);
-
+    TakeInput(sentence);
+    SpecificReverse(sentence,reversed);
+    PrintOutput(reversed);
 
 }
 
@@ -47,30 +45,33 @@ PrintOutput(reversed);
 void SpecificReverse(char A[],char R[])
 {
 
-    int i = 0; // for the traversing of the main array
-    int j = 0; // for the traversing of the result array
-    int temp = -1; // for reference of previous space
+    static int i = 0; // for the traversing of the main array
+    static int j = 0; // for the traversing of the result array
+    static int temp = -1; // for reference of previous space
+    int k = 0; //inorder to traverse back 
     while(true)
     {       
             if(A[i]==' ')
-            { int k = i; // since we have to make reverse (go back) so i won't do it with 'i' instead we will use the k variable in order to not disturb the main traversing of the main array.
-                while(k!=temp)
+            {   while(k!=temp)
                 {
                     R[j] = A[k];
                     k--;
                     j++;
                 }
                 
+                R[j] =' ';// assign space to the reversed array
                 temp = i;
                 j++;
             }
 
             i++;
-            
+            k = i-1; // because I do not want to include space this way. I am adding it manually.
+
             if(A[i]=='\0')
             {
-
-                int k = i; // since we have to make reverse (go back) so i won't do it with 'i' instead we will use the k variable in order to not disturb the main traversing of the main array.
+                i--;
+                k = i;
+                // since we have to make reverse (go back) so i won't do it with 'i' instead we will use the k variable in order to not disturb the main traversing of the main array.
                 while(k!=temp)
                 {
                     R[j] = A[k];
@@ -79,14 +80,11 @@ void SpecificReverse(char A[],char R[])
                 }                
                 temp = i;
 
-                break; // get out of the loop
+                cout<<endl;//just for console beauty ... LOL.
+                break;
             }
 
     }
-
-
-
-
 
 
 
