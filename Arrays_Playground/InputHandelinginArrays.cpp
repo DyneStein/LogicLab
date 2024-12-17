@@ -14,7 +14,7 @@ int main() {
 /*
 ------------------USING CIN TO TAKE WORD AS LETTER BY LETTER (usually in a loop)------------------------ 
 -> Cin will take input until a key is pressed or spaces is encountered. (it does not truncates input if you overflow it) 
--> It DOES NOT automatically appends the null character in the end (if there is space for null character in array). You have to manually add null at the end (making its own space available)
+-> It DOES NOT automatically appends the null character in the end (even if there is space for null character in array). You have to manually add null at the end (making its own space available)
 -> if there is no space left for null character and array is full of input. No null character is overwritten or automatically added leaving the array !nullterminated which can cause several errors.
 */
 
