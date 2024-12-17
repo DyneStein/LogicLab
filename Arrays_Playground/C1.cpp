@@ -35,28 +35,28 @@ data[1][0] = 0;
 while(k<(size*size))
 {
 
-if(j+1<size && j+1!=data[1][k] && go)
+if(j+1<size && j+1!=data[1][k-1] && go)
 {
     data[0][k] = i;
     data[1][k] = j;
     cout<<matrix[i][j];
     j++;
 }
-else if(i+1<size && i+1!=data[0][k] && go)
+else if(i+1<size && i+1!=data[0][k-1] && go)
 {
     data[0][k] = i;
     data[1][k] = j;
     cout<<matrix[i][j];
     i++;
 }
-else if(j-1>=0 && j-1!=data[1][k] && go)
+else if(j-1>=0 && j-1!=data[1][k-1] && go)
 {
     data[0][k] = i;
     data[1][k] = j;
     cout<<matrix[i][j];
     j--;
 }
-else if(i-1>=0 && i-1!=data[0][k] && go)
+else if(i-1>=0 && i-1!=data[0][k-1] && go)
 {
     data[0][k] = i;
     data[1][k] = j;
@@ -70,10 +70,10 @@ else if(i-1>=0 && i-1!=data[0][k] && go)
 
 if(restrictor)
 {
-    if(j!=0 && i!=0)
+    if(i-1!=-1)
     {
         cout<<matrix[i][j];
-        j--;
+        i--;
     }
     else{
         return 0;
