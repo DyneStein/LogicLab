@@ -2,6 +2,7 @@
 using namespace std;
 
 void digital_root(int n);
+
 int main() {
     
     int num;
