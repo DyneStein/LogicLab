@@ -4,6 +4,7 @@ int main() {
     
     int array[6][6];
     cout<<"Enter the elements of the 6X6 matrix : "<<endl;
+
     for(int i = 0;i<6;i++)
     {
         for(int j = 0;j<6;j++)
@@ -18,7 +19,7 @@ int main() {
     int k = 3;
     int counter = 0;
     int sum = 0;
-    int temp = sum;
+    int temp = -1000;
     while(r<4)
     {
         
@@ -40,7 +41,7 @@ int main() {
                 }
             }
             
-            if(sum>temp)
+            if(sum>temp || (sum<0 && -sum<-temp) )
             {
                 temp = sum;
             }
@@ -55,10 +56,7 @@ int main() {
         counter = 0;
     }
     
-    
-    cout<<endl<<"The greatest sum of hourglass is : "<<temp;
-    
-
+    cout<<"The greatest sum of hourglass is : "<<temp;
 
     return 0;
 }
