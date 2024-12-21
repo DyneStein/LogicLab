@@ -22,6 +22,7 @@ int main() {
     
     int counter = 0;
     
+
     int k = 2;
     int temp = k;
     int r = 0;
@@ -54,9 +55,7 @@ int main() {
                         counter++;
                     }
                 }
-                
-                
-            
+ 
                 if(counter>=limit && counter>counter_backup)
                 {
                     save_x = r;
