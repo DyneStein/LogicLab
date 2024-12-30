@@ -63,10 +63,6 @@ for(int i = 0;i<=z;i++)
     cout<<SameNames[i];
     cout<<endl;
 }
-    
-    
-
-
 
     return 0;
 }
