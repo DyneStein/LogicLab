@@ -7,7 +7,7 @@ int main(){
     
     
   string Sen = "I am Pakistani so I support Pak-Indian Matches.";
-  ReplaceSubstring(Sen,"Pak","Afg");
+  ReplaceSubstring(Sen,"Pak","Afghan");
   
 
     return 0;
