@@ -84,7 +84,7 @@ delete[] main_array;
 main_array = nullptr;
 
 
-
+//++X(11) + (10)X++ - ++X(11) - --X(11)
 
 for(int i = 0;i<row;i++)
 {
